@@ -1,15 +1,15 @@
 import React from 'react';
 
-import CardForm from './CardForm'
+import CardForm from './CardForm';
 import './NewCard.css';
 
 const NewCard = (props) => {
     const passCardDataHandler = (enteredCardData) => {
         const cardData = {
             ...enteredCardData,
-            id: Math.random().toString()
+            id: Math.random().toString(), // Generate a random id for the card
         };
-        props.onAddCard(cardData);
+        props.onAddCard(cardData); // Pass the card data to the parent component
     };
 
     return (
@@ -19,4 +19,4 @@ const NewCard = (props) => {
     );
 };
 
-export default NewExpense;
+export default NewCard;
